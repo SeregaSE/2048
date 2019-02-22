@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Clear Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/ClearSans-Regular.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Clear Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/ClearSans-Bold.ttf') format('woff');
+}
