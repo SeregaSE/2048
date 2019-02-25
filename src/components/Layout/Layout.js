@@ -6,7 +6,7 @@ import Footer from '../Footer';
 
 const Layout = props => (
     <StyledLayout {...props}>
-        <h1> HEADER </h1>{/* <Header /> */}
+        <Header />
         <Main />
         <Footer />
     </StyledLayout>

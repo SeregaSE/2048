@@ -26,6 +26,24 @@ const Value = styled(StyledSlot)`
     background-color: ${props => colors[props.value].background};
     transform: translate(${props => xTranslate(props)}, ${props => yTranslate(props)})) scale(1);
     transition: transform .1s ease-in-out;
+
+    &.scale-appear {
+      transform: translate(${props => xTranslate(props)}, ${props => yTranslate(props)})) scale(0);
+      transition: transform .25s ease-in;
+    }
+
+    &.scale-enter, &.scale-exit {
+      transform: translate(${props => xTranslate(props)}, ${props => yTranslate(props)})) scale(.9);
+      transition: transform .15s ease-in;
+    }
+
+    &.scale-enter-active, &.scale-exit-active {
+      transform: translate(${props => xTranslate(props)}, ${props => yTranslate(props)})) scale(1.1);
+    }
+
+    &.scale-appear-active, &.scale-enter-done, &.scale-enter-done, &.scale-exit-done {
+      transform: translate(${props => xTranslate(props)}, ${props => yTranslate(props)})) scale(1);
+    }
 `;
 
 export const Text = styled.div`

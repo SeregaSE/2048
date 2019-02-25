@@ -3,7 +3,6 @@ export const LOAD = 'LOAD';
 export const LOST = 'LOST';
 export const START = 'START';
 
-/* TURN */
 export const MOVE = 'MOVE';
 export const CANCEL = 'CANCEL';
 export const TOP = 'TOP';

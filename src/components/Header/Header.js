@@ -1,13 +1,10 @@
 import React from 'react';
 import StyledHeader from './Styled';
 
-const Header = props => {
-    console.log('HEADER');
-    return (
+const Header = props => (
     <StyledHeader {...props}>
-        Header
+        2048
     </StyledHeader>
-)
-};
+);
 
 export default Header;

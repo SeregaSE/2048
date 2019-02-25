@@ -47,7 +47,6 @@ const moveLeftOrTop = (numbers, direction) => {
                 const rightSibling = row[j + 1];
     
                 if (rightSibling && (number.value === rightSibling.value)) {
-                    console.log(number, rightSibling);
                     next.value += rightSibling.value;
                     rightSibling.dead = true;
                 }
