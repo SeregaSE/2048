@@ -6,7 +6,7 @@ const selector = createSelector(
     numbersSelector,
     positionsSelector,
     (numbers, positions) => positions.filter(position => !numbers
-        .some(n => n.x === position.x && n.y === position.y)),
+        .some(number => number.x === position.x && number.y === position.y)),
 );
 
 export default selector;

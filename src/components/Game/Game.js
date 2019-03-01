@@ -50,8 +50,14 @@ class Game extends Component {
     };
 
     render() {
-        const { numbers, game, slots } = this.props;
-        return <Field size={game.fieldSize} slots={slots} value={numbers} />;
+        const { numbers, game, positions } = this.props;
+        return (
+            <Field
+                numbers={numbers}
+                positions={positions}
+                size={game.fieldSize}
+            />
+        );
     }
 }
 
@@ -64,10 +70,13 @@ Game.propTypes = {
     numbers: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.number.isRequired,
         value: PropTypes.number.isRequired,
-        position: PropTypes.shape({
-            x: PropTypes.number.isRequired,
-            y: PropTypes.number.isRequired,
-        }).isRequired,
+        x: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired,
+        stacked: PropTypes.boolean,
+    })).isRequired,
+    positions: PropTypes.arrayOf(PropTypes.shape({
+        x: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired,
     })).isRequired,
     gameActions: PropTypes.shape({
         won: PropTypes.func.isRequired,

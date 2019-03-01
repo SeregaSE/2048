@@ -24,7 +24,7 @@ const withReduxEnhancer = withRedux(
             selector: scoreSelector,
         },
         {
-            prop: 'slots',
+            prop: 'positions',
             selector: positionsSelector,
         },
     ],

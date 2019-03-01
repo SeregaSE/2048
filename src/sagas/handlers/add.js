@@ -2,17 +2,19 @@ import { put, select } from 'redux-saga/effects';
 import random from '../../utils/random';
 import { numbers } from '../../actions';
 import core from '../../core';
-import freeSlotsSelector from '../../selectors/freeSlots';
+import freePositionsSelector from '../../selectors/freePositions';
 
 function* addHandler() {
-    const freeSlots = yield select(freeSlotsSelector);
-    const slot = freeSlots[random(0, freeSlots.length - 1)];
-    const value = [2, 2, 2, 2, 2, 4][random(0, 5)];
+    const freePositions = yield select(freePositionsSelector);
+    const position = freePositions[random(0, freePositions.length - 1)];
+    const value = random(1, 100) > 9 ? 2 : 4;
+
     const number = core.create({
-        x: slot.x,
-        y: slot.y,
+        x: position.x,
+        y: position.y,
         value,
     });
+
     yield put(numbers.addToStore(number));
 }
 

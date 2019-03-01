@@ -9,11 +9,7 @@ export default (current, next) => {
         const a = filtered[i];
         const b = next.find(n => n.id === a.id);
 
-        if (!b) {
-            return true;
-        }
-
-        if (a.value !== b.value || a.x !== b.x || a.y !== b.y) {
+        if (!b || a.value !== b.value || a.x !== b.x || a.y !== b.y) {
             return true;
         }
     }

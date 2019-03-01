@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledSlot = styled.div`
+const StyledPosition = styled.div`
     width: calc(${props => props.width}% - ${props => props.theme.spacing.unit}px);
     margin: ${props => props.theme.spacing.unit / 2}px;
     padding-top: calc(${props => props.width}% - ${props => props.theme.spacing.unit}px);
@@ -10,4 +10,4 @@ const StyledSlot = styled.div`
     background-color: ${props => props.theme.colors.primary};
 `;
 
-export default StyledSlot;
+export default StyledPosition;

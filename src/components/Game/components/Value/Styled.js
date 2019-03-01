@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import StyledSlot from '../Slot/Styled';
+import StyledPosition from '../Position/Styled';
 import colors from './colors';
 
 const xTranslate = props => `calc(${100 * props.x}% + ${props.theme.spacing.unit * props.x}px)`;
@@ -18,7 +18,7 @@ const fontSizeCoeff = (props) => {
     return 35;
 };
 
-const Value = styled(StyledSlot)`
+const Value = styled(StyledPosition)`
     position: absolute;
     top: 0;
     left: 0;
