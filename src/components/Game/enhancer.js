@@ -1,6 +1,6 @@
 import gameSelector from '../../selectors/game';
 import scoreSelector from '../../selectors/score';
-import numbersSelector from '../../selectors/numbersById'; // remove ordering
+import numbersSelector from '../../selectors/numbers';
 import positionsSelector from '../../selectors/positions';
 import {
     game,

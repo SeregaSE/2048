@@ -8,7 +8,6 @@ import {
 import moveWatcher from './watchers/move';
 import startWatcher from './watchers/start';
 import addWatcher from './watchers/add';
-import removeWatcher from './watchers/remove';
 
 function* rootSaga() {
     yield all([
@@ -18,10 +17,7 @@ function* rootSaga() {
 
     yield take([START, LOAD]);
 
-    yield all([
-        fork(moveWatcher),
-        fork(removeWatcher),
-    ]);
+    yield fork(moveWatcher);
 
     yield take([WON, LOST]);
 }

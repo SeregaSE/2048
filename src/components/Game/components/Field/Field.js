@@ -9,8 +9,8 @@ const Field = ({ size, slots, value }) => (
             <Slots size={size} />
             {value.map(item => (
                 <Value
-                    x={item.position.x}
-                    y={item.position.y}
+                    x={item.x}
+                    y={item.y}
                     width={100 / size}
                     value={item.value}
                     key={item.id}

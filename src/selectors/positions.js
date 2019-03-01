@@ -1,10 +1,10 @@
 import { createSelector } from 'reselect';
 import fieldSizeSelector from './fieldSize';
-import getPositions from '../data/getPositions';
+import core from '../core';
 
 const selector = createSelector(
     fieldSizeSelector,
-    fieldSize => getPositions(fieldSize),
+    fieldSize => core.positions(fieldSize),
 );
 
 export default selector;
