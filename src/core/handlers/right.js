@@ -1,4 +1,4 @@
-export default row => row.reduceRight((acc, current) => {
+export default (row, size) => row.reduceRight((acc, current) => {
     const right = acc[acc.length - 1];
 
     if (right && right.value === current.value && !right.stacked) {
@@ -20,7 +20,7 @@ export default row => row.reduceRight((acc, current) => {
         ...acc,
         {
             ...current,
-            x: right ? right.x - 1 : 3,
+            x: right ? right.x - 1 : size - 1,
         },
     ];
 }, []);

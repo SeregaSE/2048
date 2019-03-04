@@ -12,5 +12,5 @@ export const BOTTOM = 'BOTTOM';
 export const directions = [TOP, LEFT, RIGHT, BOTTOM];
 
 export const ADD = 'ADD';
-export const ADD_NUMBER = 'SET_NUMBER';
+export const ADD_NUMBER = 'ADD_NUMBER';
 export const SET_NUMBERS = 'SET_NUMBERS';

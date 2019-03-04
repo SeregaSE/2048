@@ -14,5 +14,5 @@ const stack = {
 
 export default (numbers, direction, size) => {
     const matrix = numbersToMatrix(numbers, direction, size);
-    return matrixToNumbers(matrix.map(row => stack[direction](row)));
+    return matrixToNumbers(matrix.map(row => stack[direction](row, size)));
 };
