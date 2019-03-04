@@ -14,7 +14,7 @@ TO DO:
 - Cancel turn
 - Sensor events
 - PropTypes
-- Refactoring
+- Refactoring (repeated code, sagas, components)
 - Tests
 - Optimizing algorithm for 6x6 8x8 fields
 - Field size setting
